@@ -21,8 +21,8 @@ VR := $(VERSION)-$(RELEASE)$(OS_DIST)
 # efibootmgr related
 EFI_BOOTNUM := 0010
 EFI_LOADER := /EFI/fedora/shimx64.efi
-EFI_LABEL := nmbl
-EFI_UKI_FILE := nmbl-cloud.uki
+EFI_LABEL ?= nmbl
+EFI_UKI_FILE ?= nmbl-cloud.uki
 
 ifeq ($(.DEFAULT_GOAL),)
 .DEFAULT_GOAL := all
