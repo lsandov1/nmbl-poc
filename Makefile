@@ -53,7 +53,10 @@ clean-mock:
 	mock -r "$(MOCK_ROOT_NAME)" --clean
 
 clean:
-	rm -vf $(wildcard *.tar *.tar.xz *.rpm *.spec) 
+	rm -vf $(wildcard *.tar *.tar.xz *.rpm *.spec)
+
+vars:
+	$(foreach v, $(.VARIABLES), $(info $(v) = $($(v))))
 
 .PHONY: all clean clean-mock init-mock deploy rpm
 
