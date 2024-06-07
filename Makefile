@@ -11,7 +11,7 @@ MOCK_ROOT_NAME ?= $(OS_NAME)-$(OS_VERSION)-$(ARCH)
 MOCK_ROOT_PATH ?= $(abspath $(shell mock -r "$(MOCK_ROOT_NAME)" --print-root-path)/../)
 DEPLOY_HOST ?= nmbl
 
-all: 
+all: rpm
 
 dracut-nmbl-$(VERSION).tar.xz :
 	$(MAKE) -C dracut-nmbl tarball
