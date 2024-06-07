@@ -18,6 +18,12 @@ OS_VERSION := $(shell grep '^VERSION_ID=' /etc/os-release | sed 's/VERSION_ID=//
 OS_DIST := $(shell rpm --eval '%{dist}')
 VR := $(VERSION)-$(RELEASE)$(OS_DIST)
 
+# efibootmgr related
+EFI_BOOTNUM := 0010
+EFI_LOADER := /EFI/fedora/shimx64.efi
+EFI_LABEL := nmbl
+EFI_UKI_FILE := nmbl-cloud.uki
+
 ifeq ($(.DEFAULT_GOAL),)
 .DEFAULT_GOAL := all
 endif
