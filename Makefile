@@ -52,9 +52,6 @@ clean-mock:
 clean:
 	rm -vf $(wildcard *.tar *.tar.xz *.rpm *.spec) 
 
-install_dependencies:
-	sudo dnf install -y git git-core make mock rpmdevtools
-
 .PHONY: all clean clean-mock init-mock deploy rpm
 
 # vim:ft=make
