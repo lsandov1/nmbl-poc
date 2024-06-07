@@ -39,6 +39,9 @@ nmbl-$(KVRA).rpm: nmbl-builder-$(VR).src.rpm dracut-nmbl-$(VR).noarch.rpm
 
 rpm: nmbl-$(KVRA).rpm
 
+install: nmbl-$(KVRA).rpm
+	sudo rpm -Uvh nmbl-$(KVRA).rpm
+
 deploy: nmbl-$(KVRA).rpm
 	scp $< "root@$(DEPLOY_HOST):"
 	ssh "root@$(DEPLOY_HOST)" ./deploy.sh "$<"
