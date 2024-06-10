@@ -23,6 +23,7 @@ EFI_BOOTNUM := 0010
 EFI_LOADER := /EFI/fedora/shimx64.efi
 EFI_LABEL ?= nmbl
 EFI_UKI_FILE ?= nmbl-cloud.uki
+EFI_BOOT_UUID := $(shell awk '/ \/boot / {print $1}' /etc/fstab)
 
 ifeq ($(.DEFAULT_GOAL),)
 .DEFAULT_GOAL := all
