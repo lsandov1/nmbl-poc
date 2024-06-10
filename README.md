@@ -40,6 +40,20 @@ make install
 ```bash
 make install_efi_entry
 ```
+
+You should see something like this
+
+```shell
+BootNext: 0010
+BootCurrent: 0001
+Timeout: 3 seconds
+BootOrder: 0001,0002,0000
+Boot0000* UiApp	FvVol(7cb8bdc9-f8eb-4f34-aaea-3ee4af6516a1)/FvFile(462caa21-7614-4503-836e-8ab6f4662331)
+Boot0001* Fedora	HD(1,GPT,b07d79a9-b628-466c-96f6-69e8f7ffbec1,0x800,0x12c000)/File(\EFI\fedora\shimx64.efi)
+Boot0002* UEFI Misc Device	PciRoot(0x0)/Pci(0x1,0x3)/Pci(0x0,0x0){auto_created_boot_option}
+Boot0010* nmbl	HD(1,GPT,b07d79a9-b628-466c-96f6-69e8f7ffbec1,0x800,0x12c000)/File(\EFI\fedora\shimx64.efi) File(.\nnmbl-cloud.uki quiet boot= rd.systemd.gpt_auto=0)
+```
+
 # the old way that's basically the same thing
 
 ## install fedora38
