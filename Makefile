@@ -43,9 +43,9 @@ install: nmbl-$(KVRA).rpm
 	sudo rpm -Uvh nmbl-$(KVRA).rpm
 
 delete_efi_entry:
-	./efi.sh delete
+	./efi.sh delete || true
 
-add_efi_entry:
+add_efi_entry: delete_efi_entry
 	./efi.sh add
 
 deploy: nmbl-$(KVRA).rpm
