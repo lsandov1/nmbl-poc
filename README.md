@@ -38,7 +38,7 @@ make install
 
 ## make a new efibootmgr entry
 ```bash
-make install_efi_entry
+make add_efi_entry
 ```
 
 You should see something like this
