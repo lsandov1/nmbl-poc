@@ -43,10 +43,10 @@ install: nmbl-$(KVRA).rpm
 	sudo rpm -Uvh nmbl-$(KVRA).rpm
 
 delete_efi_entry:
-	./efi.sh delete || true
+	scripts/efi.sh delete || true
 
 add_efi_entry: delete_efi_entry
-	./efi.sh add
+	scripts/efi.sh add
 
 deploy: nmbl-$(KVRA).rpm
 	scp $< "root@$(DEPLOY_HOST):"
