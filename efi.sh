@@ -1,5 +1,7 @@
 #!/usr/bin/bash
 
+set -x
+
 # To be called through make
 
 case "$1" in
